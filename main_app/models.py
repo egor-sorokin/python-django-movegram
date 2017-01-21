@@ -9,6 +9,7 @@ class Movement(models.Model):
     author = models.CharField(max_length=100)
     image = models.ImageField(upload_to='movement_image',
                               default='default.png')
+    likes = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name

@@ -23,13 +23,15 @@
 
             <div style="color: white">{{ movement }}</div>
 
-{#            <button id="likes" data-id="{{ picture.id }}"#}
-{#                    class="btn btn-sm btn-danger glyphicon glyphicon-heart"#}
-{#                    type="button">#}
-{#                {% if picture.likes > 0 %}#}
-{#                    {{ picture.likes }}#}
-{#                {% endif %}#}
-{#            </button>#}
+            <div data-id="{{ movement.id }}"
+                    class="movements__item-likes like-button"
+                    >
+                {% if movement.likes > 0 %}
+                    {{ movement.likes }}
+                {% else %}
+                    0
+                {% endif %}
+            </div>
 
         </div>
     </div>

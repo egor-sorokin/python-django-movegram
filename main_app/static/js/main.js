@@ -1,15 +1,15 @@
 (function ($) {
     'use strict';
 
-    $('button').on('click', function (e) {
+    $('.like-button').on('click', function (e) {
         e.preventDefault();
 
         var $this = $(this);
 
         $.ajax({
-            url: '/like_picture/',
+            url: '/like_movement/',
             type: 'POST',
-            data: {picture_id: $this.attr('data-id')},
+            data: {movement_id: $this.attr('data-id')},
             success: function (response) {
                 $this.html(' ' + response)
             }

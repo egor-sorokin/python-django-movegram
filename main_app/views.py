@@ -18,6 +18,22 @@ def detail(request, movement_id):
     return render(request, 'detail.html', {'movement': movement})
 
 
+def like_movement(request):
+    movement_id = request.POST.get('movement_id', None)
+
+    likes = 0
+
+    if movement_id:
+        movement = Movement.objects.get(id=int(movement_id))
+
+        if movement is not None:
+            likes = movement.likes + 1
+            movement.likes = likes
+            movement.save()
+
+    return HttpResponse(likes)
+
+
 def post_movement(request):
     form = MovementForm(request.POST, request.FILES)
     if form.is_valid():

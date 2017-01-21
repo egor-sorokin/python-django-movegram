@@ -6,33 +6,35 @@
     <div class="movements">
         <div class="movements__list">
             {% for movement in movements %}
-            <div class="movements__item">
+                <div class="movements__item">
 
-                <a href="/{{ movement.id }}/" style="background-image: url('{{ movement.image.url }}')"
-                         class="movements__item-image">
-                </a>
-
-{#                <div class="movements__item-likes">#}
-{#                    <button id="likes" data-id="{{ picture.id }}"#}
-{#                            class="btn btn-sm btn-danger glyphicon glyphicon-heart"#}
-{#                            type="button">#}
-{#                        {% if picture.likes > 0 %}#}
-{#                            {{ picture.likes }}#}
-{#                        {% endif %}#}
-{#                    </button>#}
-{#                </div>#}
-
-                <div class="movements__item-title-container">
-                    <h2 class="movements__item-title">{{ movement.name }}</h2>
-                    <a class="movements__item-author"
-                       href="/user/{{ movement.author }}/">
-                        by: {{ movement.author }}
+                    <a href="/{{ movement.id }}/"
+                       style="background-image: url('{{ movement.image.url }}')"
+                       class="movements__item-image">
                     </a>
+
+                    <div class="movements__item-info">
+                        <div class="movements__item-title-container">
+                            <h2 class="movements__item-title">{{ movement.name }}</h2>
+                            <a class="movements__item-author"
+                               href="/user/{{ movement.author }}/">
+                                by: {{ movement.author }}
+                            </a>
+
+                        </div>
+                        <div data-id="{{ movement.id }}"
+                             class="movements__item-likes like-button">
+                            {% if movement.likes > 0 %}
+                                {{ movement.likes }}
+                            {% else %}
+                                0
+                            {% endif %}
+                        </div>
+                    </div>
+
+
                 </div>
-
-
-            </div>
-        {% endfor %}
+            {% endfor %}
         </div>
 
     </div>
