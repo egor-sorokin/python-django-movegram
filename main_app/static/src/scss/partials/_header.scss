@@ -32,6 +32,12 @@
     right: 40px;
 
     &-item {
+      display: inline-block;
+
+      &:last-of-type {
+        margin-left: 20px;
+      }
+
       &-link {
         font-family: $default-font-family;
         font-weight: 400;

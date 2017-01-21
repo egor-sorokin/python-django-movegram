@@ -442,13 +442,17 @@ textarea {
     position: absolute;
     top: 30px;
     right: 40px; }
-    .header__menu-item-link {
-      font-family: "Heebo", "Helvetica", sans-serif;
-      font-weight: 400;
-      font-size: 14px;
-      color: #FFFFFF;
-      cursor: pointer;
-      transition: color 0.5s ease; }
+    .header__menu-item {
+      display: inline-block; }
+      .header__menu-item:last-of-type {
+        margin-left: 20px; }
+      .header__menu-item-link {
+        font-family: "Heebo", "Helvetica", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #FFFFFF;
+        cursor: pointer;
+        transition: color 0.5s ease; }
 
 .header__menu-item-link:hover {
   color: rgba(230, 236, 240, 0.4); }
