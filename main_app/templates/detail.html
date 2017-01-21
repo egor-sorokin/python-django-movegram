@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="picture panel panel-default">
+        <div class="panel-heading">
+            <h2 class="panel-title">{{ movement.name }}</h2>
+        </div>
+        <div class="panel-body clearfix">
+            <div class="pull-left">
+                <img src="{{ movement.image.url }}" alt="Image" width="100" height="auto">
+            </div>
+            <table>
+                <tr>
+                    <th>
+                        <img src="{% static 'images/logo.png' %}"
+                             alt="Image" width="40" height="40">
+                        Author:
+                    </th>
+                    <td>{{ movement.author }}</td>
+                </tr>
+            </table>
+
+            <div style="color: white">{{ movement }}</div>
+
+{#            <button id="likes" data-id="{{ picture.id }}"#}
+{#                    class="btn btn-sm btn-danger glyphicon glyphicon-heart"#}
+{#                    type="button">#}
+{#                {% if picture.likes > 0 %}#}
+{#                    {{ picture.likes }}#}
+{#                {% endif %}#}
+{#            </button>#}
+
+        </div>
+    </div>
+{% endblock %}

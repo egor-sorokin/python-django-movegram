@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  @include font-smoothing(on);
+}
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+body {
+  font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
+  color: #ffffff;
+  transition: all .4s .3s ease-in;
+  background-image: linear-gradient(-225deg, #222141, #49486F);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+body,html{
+  min-height: 100vh;
+}

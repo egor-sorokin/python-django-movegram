@@ -1,0 +1,70 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movements</title>
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'app/assets/css/style.css' %}">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header__wrap">
+            <div class="header__logo">
+                <a href="/" class="header__logo-link" >
+                    <img src="{% static 'images/logo.png' %}" alt="logo" class="header__logo-img">
+                </a>
+            </div>
+            <ul class="header__menu">
+                {% if user.is_authenticated %}
+                    <li class="header__menu-item">
+                        <a class="header__menu-item-link"
+                           href="{% url 'profile' user.username %}">
+                            {{ user.username }}
+                        </a>
+                    </li>
+
+                    <li class="header__menu-item">
+                        <a class="header__menu-item-link"
+                           href="{% url 'logout' %}">
+                            Logout
+                        </a>
+                    </li>
+
+            {% else %}
+                    <li class="header__menu-item">
+                        <a class="header__menu-item-link"
+                           href="{% url 'login' %}">
+                            Login
+                        </a>
+                    </li>
+            {% endif %}
+            </ul>
+        </div>
+    </header>
+
+    <main role="main">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer__wrap">
+            <a href="/" class="footer__logo-link">
+                <img src="{% static 'images/logo.png' %}" alt="logo" class="footer__logo-img">
+            </a>
+            <div class="footer__info">
+                <div class="footer__copyright">2017 Year</div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+
+<script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

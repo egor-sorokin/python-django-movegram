@@ -1,0 +1,17 @@
+$base : #F7F6F0;
+$darken : darken(#F7F6F0 , 30%);
+$back: darken(#F7F6F0, 40%);
+$default-font-family: 'Heebo', 'Helvetica', sans-serif;
+
+$extraLargeWidth: 1461px;
+$largeWidth: 1179px;
+$mediumWidth: 959px;
+$smallWidth: 599px;
+$extraSmallWidth: 319px;
+$largeContainer: $largeWidth + 1px;
+$mediumContainer: $mediumWidth + 1px;
+
+$whiteColor: #FFFFFF;
+$darkGrey: #4C6372;
+$lightBlue: #2EA5F3;
+$blue: #145F8F;

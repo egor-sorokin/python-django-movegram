@@ -1,0 +1,18 @@
+@import 'mixins/_fonts.scss';
+
+// Config modules
+@import 'modules/_reset.scss';
+@import 'modules/_vars.scss';
+@import 'modules/_defaults.scss';
+@import 'modules/_normalize.scss';
+
+// PARTIALS
+@import 'partials/_header.scss';
+@import 'partials/_movements';
+@import 'partials/_auth';
+@import 'partials/_footer.scss';
+
+// OBJECTS & MODULES
+@import 'modules/_buttons.scss';
+@import 'modules/_typography.scss';
+@import 'modules/_app.scss';
