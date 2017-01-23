@@ -592,6 +592,41 @@ textarea {
 .auth__container:hover {
   box-shadow: 0 10px 20px 0 rgba(106, 125, 150, 0.17); }
 
+.details__content {
+  overflow: hidden;
+  margin: 60px auto 0;
+  width: 700px;
+  height: 350px; }
+
+.details__image {
+  float: left;
+  width: 50%;
+  height: 350px;
+  background-size: cover;
+  background-position: 50% 50%; }
+
+.details__name {
+  font-size: 32px; }
+
+.details__author-link {
+  font-family: "Heebo", "Helvetica", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  line-height: 24px;
+  transition: color 0.5s ease; }
+
+.details__description {
+  float: left;
+  position: relative;
+  padding: 30px;
+  width: 50%;
+  height: 350px;
+  background-color: #7DB5A6; }
+
+.details__author-link:hover {
+  color: rgba(230, 236, 240, 0.4); }
+
 .footer {
   width: 100%; }
   .footer__wrap {

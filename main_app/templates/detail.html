@@ -2,37 +2,22 @@
 {% load staticfiles %}
 
 {% block content %}
-    <div class="picture panel panel-default">
-        <div class="panel-heading">
-            <h2 class="panel-title">{{ movement.name }}</h2>
-        </div>
-        <div class="panel-body clearfix">
-            <div class="pull-left">
-                <img src="{{ movement.image.url }}" alt="Image" width="100" height="auto">
+    <div class="details">
+        <div class="details__content">
+            <div class="details__image" style="background-image: url('{{ movement.image.url }}')"></div>
+            <div class="details__description">
+                <h1 class="details__name">{{ movement.name }}</h1>
+                <div class="details__author">Author: <a href="/user/{{ movement.author }}/" class="details__author-link">{{ movement.author }}</a></div>
+                <div data-id="{{ movement.id }}"
+                     class="details__likes movements__item-likes like-button"
+                >
+                    {% if movement.likes > 0 %}
+                        {{ movement.likes }}
+                    {% else %}
+                        0
+                    {% endif %}
+                </div>
             </div>
-            <table>
-                <tr>
-                    <th>
-                        <img src="{% static 'images/logo.png' %}"
-                             alt="Image" width="40" height="40">
-                        Author:
-                    </th>
-                    <td>{{ movement.author }}</td>
-                </tr>
-            </table>
-
-            <div style="color: white">{{ movement }}</div>
-
-            <div data-id="{{ movement.id }}"
-                    class="movements__item-likes like-button"
-                    >
-                {% if movement.likes > 0 %}
-                    {{ movement.likes }}
-                {% else %}
-                    0
-                {% endif %}
-            </div>
-
         </div>
     </div>
 {% endblock %}
