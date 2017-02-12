@@ -15,11 +15,13 @@
                         {{ field }}
                         <label for="{{ field.id_for_label }}"
                                class="input__label">
-                            {{ field.label }}:
+                            {{ field.label }}
                         </label>
                     </div>
                 {% endfor %}
-                <input type="submit" value="Submit">
+                <div class="button__container">
+                    <input type="submit" value="Submit" class="button">
+                </div>
             </form>
         </div>
     </div>

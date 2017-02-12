@@ -1,73 +1,23 @@
-.auth {
-  position: relative;
+.login {
+  width: 460px;
 
-  margin-top: -130px;
-  margin-bottom: 51px;
+  margin: 60px auto;
+  padding: 50px 70px 70px;
 
-  &__container {
-    position: relative;
-    top: 0;
-    left: 50%;
+  background-color: #7DB5A6;
+  border-radius: 3px;
 
-    padding: 75px 186px 85px;
+  text-align: center;
 
-    width: 708px;
-
-    background: $whiteColor;
-    border: 1px solid #F0F0F0;
-    border-radius: 4px;
-    box-shadow: 0 3px 8px 0 rgba(106, 125, 150, 0.14);
-
-    text-align: center;
-
-    transform: translateX(-50%);
-
-    transition: box-shadow 0.5s cubic-bezier(0.250, 0.100, 0.250, 1.000);
+  &__title {
+    font-family: $default-font-family;
+    font-size: 34px;
+    font-weight: 300;
+    color: $whiteColor;
   }
   &__form {
-    &-title {
-      font-family: $default-font-family;
-      font-size: 34px;
-      font-weight: 300;
-      color: $whiteColor;
-    }
-    &-text {
-      margin-top: 2px;
-      margin-bottom: 34px;
+    width: 320px;
 
-      opacity: 0.8;
-
-      font-family: $default-font-family;
-      font-size: 20px;
-      font-weight: 400;
-      color: $whiteColor;
-    }
+    margin: 0 auto;
   }
-  &__list {
-    margin-top: 45px;
-
-    &-item {
-      &:nth-of-type(n + 2) {
-        margin-top: 42px;
-      }
-    }
-  }
-  .button {
-    &__container {
-      margin-top: 83px;
-      margin-bottom: 6px;
-    }
-
-    height: 52px;
-
-    padding: 11px 41px 10px 42px;
-
-    &__text {
-      font-size: 19px;
-    }
-  }
-}
-
-.auth__container:hover {
-  box-shadow: 0 10px 20px 0 rgba(106, 125, 150, 0.17);
 }
