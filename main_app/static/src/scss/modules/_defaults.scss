@@ -5,10 +5,12 @@
 
   @include font-smoothing(on);
 }
+
 html {
   font-size: 62.5%;
   height: 100%;
 }
+
 body {
   font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
   color: #ffffff;
@@ -18,6 +20,7 @@ body {
   background-attachment: fixed;
 
 }
-body,html{
+
+body, html {
   min-height: 100vh;
 }
