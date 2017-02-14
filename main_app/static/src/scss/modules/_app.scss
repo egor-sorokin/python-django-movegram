@@ -2,5 +2,9 @@
   margin: 0 auto;
 
   width: $largeContainer;
-  height: 100%;
+  min-height: calc(100% - 110px);
+}
+
+.main {
+  padding-bottom: 110px;
 }

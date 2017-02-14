@@ -1,8 +1,8 @@
 .footer {
-  margin-top: 62px;
-
+  width: $largeContainer;
   height: 110px;
-  width: 100%;
+
+  margin: 0 auto -110px;
 
   &__wrap {
     width: 100%;
