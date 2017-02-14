@@ -13,10 +13,20 @@
                     <a href="/{{ movement.id }}/"
                        class="profile__movements-image"
                        style="background-image: url('{{ movement.image.url }}')">
-                        <h2 class="profile__movements-title">
+
+                    </a>
+                 <h2 class="profile__movements-title">
                             {{ movement.name }}
                         </h2>
-                    </a>
+                <div data-id="{{ movement.id }}"
+                     class="profile__movements-likes"
+                >
+                    {% if movement.likes > 0 %}
+                        {{ movement.likes }}
+                    {% else %}
+                        0
+                    {% endif %}
+                </div>
                 </div>
             {% endfor %}
         </div>
