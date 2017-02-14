@@ -9,7 +9,8 @@ class MovementForm(forms.ModelForm):
         widgets = {
             'name': forms.TextInput(attrs={'class': 'input'}),
             'author': forms.TextInput(attrs={'class': 'input'}),
-            'image': forms.FileInput(attrs={'class': 'input'}),
+            'image': forms.FileInput(
+                attrs={'class': 'input input--image'}),
         }
 
 
@@ -18,4 +19,4 @@ class LoginForm(forms.Form):
                                widget=forms.TextInput(
                                    attrs={'class': 'input'}))
     password = forms.CharField(widget=forms.PasswordInput(
-                                   attrs={'class': 'input'}))
+        attrs={'class': 'input'}))

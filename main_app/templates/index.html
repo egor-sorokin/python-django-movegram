@@ -40,22 +40,30 @@
     </div>
 
     <div class="movements__form-container">
+        <h2 class="movements__form-title">Add your photo right now!</h2>
         <form enctype="multipart/form-data" action="post_url/"
               method="post" class="movements__form">
             {% csrf_token %}
 
             {% for field in form %}
                 <div class="input__container">
-                    {{ field.errors }}
-                    {{ field }}
-                    <label for="{{ field.id_for_label }}"
-                           class="input__label">
-                        {{ field.label }}:
-                    </label>
-                </div>
-            {% endfor %}
+                    {% if field.html_name == 'image' %}
+                        {{ field }}
 
-            <input type="submit" value="Submit">
+                    {% else %}
+                        {{ field.errors }}
+                        {{ field }}
+                        <label for="{{ field.id_for_label }}"
+                               class="input__label">
+                            {{ field.label }}
+                        </label>
+                    {% endif %}
+                </div>
+
+            {% endfor %}
+            <div class="button__container">
+                <input type="submit" value="Submit" class="button">
+            </div>
         </form>
     </div>
 

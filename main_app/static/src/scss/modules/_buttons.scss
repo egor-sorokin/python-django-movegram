@@ -2,7 +2,7 @@
   &__container {
     position: relative;
 
-    margin: 70px auto 0;
+    margin: 60px auto 0;
     padding: 11px 30px 11px;
 
     width: 180px;
@@ -13,6 +13,8 @@
     border-radius: 200px;
 
     transition: opacity 0.3s ease;
+
+    text-align: center;
 
     &:hover {
       opacity: 0.5;
