@@ -3,14 +3,13 @@
 ## Instalation
 Make a clone of this repository or download ZIP.
 
-If you don't have python/pip/Django or Pillow pre-installed:
-You can use official docs: 
+If you don't have python/pip/Django or Pillow pre-installed, you can use official docs: 
   - https://www.python.org/downloads/
   - https://pip.pypa.io/en/stable/installing/
   - https://docs.djangoproject.com/en/1.10/topics/install/
   - http://pillow.readthedocs.io/en/3.4.x/installation.html
   
-If you already have python on your machine, the installation of other tools will be low-hanging fruit for you, just type in your terminal::
+If you already have python on your machine, the installation of other tools will be low-hanging fruit for you, just type in your terminal:
 ```sh
 $ python get-pip.py
 $ pip install Django
