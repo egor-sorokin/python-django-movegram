@@ -31,3 +31,9 @@ $ python manage.py migrate
 $ python manage.py runserver
 ```
 By default you can find the app on http://127.0.0.1:8000/
+
+## Access to the admin panel
+http://127.0.0.1:8000/admin
+
+username: egorsorokin  
+password: egorsorokin
