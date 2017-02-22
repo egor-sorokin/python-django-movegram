@@ -15,7 +15,6 @@
   color: #FFFFFF;
 
   &__container {
-    overflow: hidden;
     position: relative;
 
     margin-top: 30px;
@@ -53,5 +52,25 @@
     margin-top: 20px;
 
     border-bottom: none;
+  }
+  &--dirty + &__label {
+    transition: none;
+
+    visibility: visible;
+
+    opacity: 0;
+
+    transform: translateX(320px);
+  }
+  &--error {
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+
+    font-family: $default-font-family;
+    font-size: 14px;
+    font-weight: 400;
+    color: $error;
+    text-align: left;
   }
 }

@@ -22,19 +22,9 @@
 
     errors = {
       usernameEmpty: 'Please enter a username',
-      nameEmpty: 'Please enter a name',
-      authorEmpty: 'Please enter an author',
       passwordEmpty: 'Please enter a password',
-      passwordTooShort: 'Password must be at least 6 characters'
-    };
-
-    errorCallbacks = {
-      'password': function ($input, value, $errorLabel) {
-        if (value.length < 6) {
-          $input.attr('data-valid', 'invalid');
-          $errorLabel.text(errors.passwordTooShort);
-        }
-      }
+      nameEmpty: 'Please enter a name',
+      authorEmpty: 'Please enter an author'
     };
 
 
@@ -77,10 +67,6 @@
 
       if (value) {
         $input.attr('data-valid', 'valid');
-
-        if (errorCallbacks.hasOwnProperty(name)) {
-          errorCallbacks[name]($input, value, $errorLabel);
-        }
       } else {
         $input.attr('data-valid', 'invalid');
         $errorLabel.text(errors[name + 'Empty']);
