@@ -31,6 +31,12 @@ $ python manage.py runserver
 ```
 By default you can find the app on http://127.0.0.1:8000/
 
+## Existing user and access
+http://127.0.0.1:8000/login/
+
+username: egorsorokin  
+password: egorsorokin
+
 ## Access to the admin panel
 http://127.0.0.1:8000/admin
 
