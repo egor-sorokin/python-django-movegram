@@ -432,7 +432,6 @@ textarea {
   font-size: 18px;
   color: #FFFFFF; }
   .input__container {
-    overflow: hidden;
     position: relative;
     margin-top: 30px; }
   .input__label {
@@ -462,6 +461,22 @@ textarea {
   .input--image {
     margin-top: 20px;
     border-bottom: none; }
+  .input--dirty + .input__label {
+    transition: none;
+    visibility: visible;
+    opacity: 0;
+    -webkit-transform: translateX(320px);
+        -ms-transform: translateX(320px);
+            transform: translateX(320px); }
+  .input--error {
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    font-family: "Heebo", "Helvetica", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #ff9fd0;
+    text-align: left; }
 
 .header {
   width: 100%; }
